@@ -57,11 +57,11 @@ Next.js Frontend  →  Express Backend API  →  MongoDB Database
     Logout functionality
     Navbar updates based on login status
   ## Protected Features
-  Only logged-in users can:
+  - Only logged-in users can:
     - Post a new job request
     - Update job status
     - Delete a job request
-  Bonus Features Included:
+  - Bonus Features Included:
     - JWT-based authentication
     - Unit/API tests using Jest and Supertest
     - Seed script to insert sample jobs
@@ -135,16 +135,16 @@ Check Node.js and npm versions:
 # Backend Environment Variables
 - Create a .env file inside the backend folder:
   - backend/.env
-    PORT=5000
-    MONGO_URI=your_mongodb_connection_string
-    CLIENT_URL=http://localhost:3000
-    JWT_SECRET=your_jwt_secret_key
-    JWT_EXPIRES_IN=7d
+    - PORT=5000
+    - MONGO_URI=your_mongodb_connection_string
+    - CLIENT_URL=http://localhost:3000
+    - JWT_SECRET=your_jwt_secret_key
+    - JWT_EXPIRES_IN=7d
 
 # Frontend Environment Variables
 - Create a .env.local file inside the frontend folder:
   - frontend/.env.local
-    NEXT_PUBLIC_API_URL=http://localhost:5000/api
+    - NEXT_PUBLIC_API_URL=http://localhost:5000/api
 
 # Set up Instructions
 ## Backend Setup Instructions
