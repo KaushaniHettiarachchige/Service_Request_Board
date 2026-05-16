@@ -6,7 +6,7 @@ This application allows homeowners to post service requests and allows tradespeo
 
 ---
 
-## Project Overview
+# Project Overview
 
 Service Request Board is a small full-stack web application where users can:
 
@@ -25,38 +25,38 @@ The project follows a simple architecture:
 
 Next.js Frontend  →  Express Backend API  →  MongoDB Database
 
-## Tech Stack
-  # Frontend
+# Tech Stack
+  ## Frontend
     Next.js
     React
     App Router
     Plain CSS
-  # Backend
+  ## Backend
     Node.js
     Express.js
     MongoDB
     Mongoose
     JWT Authentication
     bcryptjs
-  # Testing
+  ## Testing
     Jest
     Supertest
     mongodb-memory-server
     
-## Main Features
-  # Public Features
+# Main Features
+  ## Public Features
     View all service requests
     Search jobs by title or description
     Filter jobs by category
     View job details
     Sort jobs by newest or oldest
-  # Authentication Features
+  ## Authentication Features
     User registration
     User login
     JWT token-based authentication
     Logout functionality
     Navbar updates based on login status
-  # Protected Features
+  ## Protected Features
   Only logged-in users can:
     Post a new job request
     Update job status
@@ -67,7 +67,7 @@ Next.js Frontend  →  Express Backend API  →  MongoDB Database
     Seed script to insert sample jobs
     Keyword search across title and description
     
-## Folder Structure
+# Folder Structure
   Service_Request_Board/
   │
   ├── backend/
@@ -116,7 +116,7 @@ Next.js Frontend  →  Express Backend API  →  MongoDB Database
   ├── .gitignore
   └── README.md
 
-## Prerequisites
+# Prerequisites
 Before running this project, install:
   Node.js
   npm
@@ -128,11 +128,11 @@ Check Node.js and npm versions:
   node -v
   npm -v
   
-## Environment Variables
+# Environment Variables
 Environment files are not included in GitHub for security reasons.
 You need to create the following files manually.
 
-## Backend Environment Variables
+# Backend Environment Variables
 Create a .env file inside the backend folder:
   backend/.env
     PORT=5000
@@ -141,13 +141,13 @@ Create a .env file inside the backend folder:
     JWT_SECRET=your_jwt_secret_key
     JWT_EXPIRES_IN=7d
 
-## Frontend Environment Variables
+# Frontend Environment Variables
 Create a .env.local file inside the frontend folder:
   frontend/.env.local
     NEXT_PUBLIC_API_URL=http://localhost:5000/api
 
-## Set up Instructions
-# Backend Setup Instructions
+# Set up Instructions
+## Backend Setup Instructions
 Go to the backend folder:
   cd backend
 Install dependencies:
@@ -159,7 +159,7 @@ The backend will run on:
 Test the backend root route:
   http://localhost:5000
 
-# Frontend Setup Instructions
+## Frontend Setup Instructions
 Open a new terminal and go to the frontend folder:
   cd frontend
 Install dependencies:
@@ -169,29 +169,29 @@ Start the frontend development server:
 The frontend will run on:
   http://localhost:3000
 
-## API Endpoints
-# Auth Routes
+# API Endpoints
+## Auth Routes
   POST	/api/auth/register	Register a new user
   POST	/api/auth/login	Login user
   GET	/api/auth/me	Get logged-in user details
-# Job Routes
+## Job Routes
   GET	/api/jobs	Public	Get all jobs
   GET	/api/jobs/:id	Public	Get single job
   POST	/api/jobs	Protected	Create new job
   PATCH	/api/jobs/:id	Protected	Update job status
   DELETE	/api/jobs/:id	Protected	Delete job
 
-## Seed script to insert sample jobs.
+# Seed script to insert sample jobs.
 Run:
   cd backend
   npm run seed
 
-## Running Backend Tests
+# Running Backend Tests
 Run tests:
   cd backend
   npm test
 
-## Tested endpoints include:
+# Tested endpoints include:
   GET /api/jobs
   GET /api/jobs?category=Plumbing
   POST /api/jobs without JWT token
@@ -199,7 +199,7 @@ Run tests:
   PATCH /api/jobs/:id with JWT token
   DELETE /api/jobs/:id with JWT token
 
-## Authentication Flow
+# Authentication Flow
 The application uses JWT-based authentication.
 User registers or logs in.
 Backend returns a JWT token.
@@ -207,8 +207,8 @@ Frontend stores the token in localStorage.
 Protected API requests send the token in the Authorization header.
 Backend verifies the token before allowing create, update, or delete operations.
 
-## GitHub Repository
+# GitHub Repository
 https://github.com/KaushaniHettiarachchige/Service_Request_Board
 
-## Deployment
+# Deployment
 Use Vercel
