@@ -58,14 +58,14 @@ Next.js Frontend  →  Express Backend API  →  MongoDB Database
     Navbar updates based on login status
   ## Protected Features
   Only logged-in users can:
-    Post a new job request
-    Update job status
-    Delete a job request
+    - Post a new job request
+    - Update job status
+    - Delete a job request
   Bonus Features Included:
-    JWT-based authentication
-    Unit/API tests using Jest and Supertest
-    Seed script to insert sample jobs
-    Keyword search across title and description
+    - JWT-based authentication
+    - Unit/API tests using Jest and Supertest
+    - Seed script to insert sample jobs
+    - Keyword search across title and description
     
 # Folder Structure
   Service_Request_Board/
@@ -118,23 +118,23 @@ Next.js Frontend  →  Express Backend API  →  MongoDB Database
 
 # Prerequisites
 Before running this project, install:
-  Node.js
-  npm
-  Git
-  MongoDB Atlas account or local MongoDB
-  VS Code or any code editor
+  - Node.js
+  - npm
+  - Git
+  - MongoDB Atlas account or local MongoDB
+  - VS Code or any code editor
 
 Check Node.js and npm versions:
-  node -v
-  npm -v
+  - node -v
+  - npm -v
   
 # Environment Variables
-Environment files are not included in GitHub for security reasons.
-You need to create the following files manually.
+- Environment files are not included in GitHub for security reasons.
+- You need to create the following files manually.
 
 # Backend Environment Variables
-Create a .env file inside the backend folder:
-  backend/.env
+- Create a .env file inside the backend folder:
+  - backend/.env
     PORT=5000
     MONGO_URI=your_mongodb_connection_string
     CLIENT_URL=http://localhost:3000
@@ -142,70 +142,70 @@ Create a .env file inside the backend folder:
     JWT_EXPIRES_IN=7d
 
 # Frontend Environment Variables
-Create a .env.local file inside the frontend folder:
-  frontend/.env.local
+- Create a .env.local file inside the frontend folder:
+  - frontend/.env.local
     NEXT_PUBLIC_API_URL=http://localhost:5000/api
 
 # Set up Instructions
 ## Backend Setup Instructions
-Go to the backend folder:
+- Go to the backend folder:
   cd backend
-Install dependencies:
+- Install dependencies:
   npm install
-Start the backend development server:
+- Start the backend development server:
   npm run dev
-The backend will run on:
+- The backend will run on:
   http://localhost:5000
-Test the backend root route:
+- Test the backend root route:
   http://localhost:5000
 
 ## Frontend Setup Instructions
-Open a new terminal and go to the frontend folder:
+- Open a new terminal and go to the frontend folder:
   cd frontend
-Install dependencies:
+- Install dependencies:
   npm install
-Start the frontend development server:
+- Start the frontend development server:
   npm run dev
-The frontend will run on:
+- The frontend will run on:
   http://localhost:3000
 
 # API Endpoints
 ## Auth Routes
-  POST	/api/auth/register	Register a new user
-  POST	/api/auth/login	Login user
-  GET	/api/auth/me	Get logged-in user details
+  - POST	/api/auth/register	Register a new user
+  - POST	/api/auth/login	Login user
+  - GET	/api/auth/me	Get logged-in user details
 ## Job Routes
-  GET	/api/jobs	Public	Get all jobs
-  GET	/api/jobs/:id	Public	Get single job
-  POST	/api/jobs	Protected	Create new job
-  PATCH	/api/jobs/:id	Protected	Update job status
-  DELETE	/api/jobs/:id	Protected	Delete job
+  - GET	/api/jobs	Public	Get all jobs
+  - GET	/api/jobs/:id	Public	Get single job
+  - POST	/api/jobs	Protected	Create new job
+  - PATCH	/api/jobs/:id	Protected	Update job status
+  - DELETE	/api/jobs/:id	Protected	Delete job
 
 # Seed script to insert sample jobs.
 Run:
-  cd backend
-  npm run seed
+  - cd backend
+  - npm run seed
 
 # Running Backend Tests
 Run tests:
-  cd backend
-  npm test
+  - cd backend
+  - npm test
 
 # Tested endpoints include:
-  GET /api/jobs
-  GET /api/jobs?category=Plumbing
-  POST /api/jobs without JWT token
-  POST /api/jobs with JWT token
-  PATCH /api/jobs/:id with JWT token
-  DELETE /api/jobs/:id with JWT token
+  - GET /api/jobs
+  - GET /api/jobs?category=Plumbing
+  - POST /api/jobs without JWT token
+  - POST /api/jobs with JWT token
+  - PATCH /api/jobs/:id with JWT token
+  - DELETE /api/jobs/:id with JWT token
 
 # Authentication Flow
-The application uses JWT-based authentication.
-User registers or logs in.
-Backend returns a JWT token.
-Frontend stores the token in localStorage.
-Protected API requests send the token in the Authorization header.
-Backend verifies the token before allowing create, update, or delete operations.
+- The application uses JWT-based authentication.
+- User registers or logs in.
+- Backend returns a JWT token.
+- Frontend stores the token in localStorage.
+- Protected API requests send the token in the Authorization header.
+- Backend verifies the token before allowing create, update, or delete operations.
 
 # GitHub Repository
 https://github.com/KaushaniHettiarachchige/Service_Request_Board
