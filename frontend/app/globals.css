@@ -1173,3 +1173,245 @@ select {
   opacity: 0.55;
   cursor: not-allowed;
 }
+
+/* =========================
+   CUSTOM DELETE CONFIRM MODAL
+========================= */
+
+.delete-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+
+  background: rgba(8, 13, 32, 0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.delete-modal {
+  width: min(460px, 100%);
+  position: relative;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(122, 73, 136, 0.18);
+  border-radius: 22px;
+  padding: 34px 30px 28px;
+  text-align: center;
+  box-shadow: 0 24px 70px rgba(16, 25, 54, 0.28);
+  animation: deleteModalPop 0.18s ease-out;
+}
+
+.delete-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 18px;
+  width: 34px;
+  height: 34px;
+  border: none;
+  border-radius: 50%;
+  background: #f3eaf6;
+  color: #7a4988;
+  font-size: 24px;
+  font-weight: 800;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  line-height: 1;
+}
+
+.delete-modal-close:hover {
+  background: #ead9ef;
+}
+
+.delete-modal-icon {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #fff1f2;
+  color: #dc2626;
+  border: 1px solid #fecdd3;
+  font-size: 36px;
+  font-weight: 900;
+}
+
+.delete-modal h2 {
+  margin: 0 0 12px;
+  color: #101936;
+  font-size: 28px;
+  line-height: 1.2;
+}
+
+.delete-modal p {
+  margin: 0;
+  color: #65708a;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.delete-modal p strong {
+  color: #101936;
+}
+
+.delete-modal-actions {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  margin-top: 28px;
+}
+
+.delete-modal-cancel,
+.delete-modal-confirm {
+  border: none;
+  border-radius: 12px;
+  padding: 14px 22px;
+  font-size: 15px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.delete-modal-cancel {
+  background: #ffffff;
+  color: #101936;
+  border: 1px solid #e1e5ef;
+}
+
+.delete-modal-cancel:hover {
+  border-color: #7a4988;
+  color: #7a4988;
+  background: #faf4fc;
+}
+
+.delete-modal-confirm {
+  background: #dc2626;
+  color: #ffffff;
+  box-shadow: 0 12px 26px rgba(220, 38, 38, 0.25);
+}
+
+.delete-modal-confirm:hover {
+  background: #b91c1c;
+  transform: translateY(-1px);
+}
+
+.delete-modal-cancel:disabled,
+.delete-modal-confirm:disabled,
+.delete-modal-close:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+}
+
+@keyframes deleteModalPop {
+  from {
+    transform: scale(0.94) translateY(8px);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 520px) {
+  .delete-modal {
+    padding: 32px 22px 24px;
+  }
+
+  .delete-modal-actions {
+    flex-direction: column;
+  }
+
+  .delete-modal-cancel,
+  .delete-modal-confirm {
+    width: 100%;
+  }
+}
+
+/* =========================
+   ALL DROPDOWN MENUS - PURPLE THEME
+========================= */
+
+select,
+.select-field,
+.createjob-group select,
+.detailjob-form-group select,
+.auth-group select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  width: 100%;
+  border: 1px solid #d8ddec;
+  border-radius: 12px;
+  background-color: #ffffff;
+  color: #101936;
+
+  padding: 14px 46px 14px 15px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+
+  background-image:
+    url("data:image/svg+xml,%3Csvg width='14' height='9' viewBox='0 0 14 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.5 1.5L7 7L12.5 1.5' stroke='%237A4988' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"),
+    linear-gradient(135deg, #ffffff, #ffffff);
+  background-repeat: no-repeat;
+  background-position: right 16px center, center;
+  background-size: 14px, 100%;
+
+  transition: 0.2s ease;
+}
+
+select:hover,
+.select-field:hover,
+.createjob-group select:hover,
+.detailjob-form-group select:hover,
+.auth-group select:hover {
+  border-color: #7a4988;
+  background-color: #faf4fc;
+}
+
+select:focus,
+.select-field:focus,
+.createjob-group select:focus,
+.detailjob-form-group select:focus,
+.auth-group select:focus {
+  border-color: #7a4988;
+  box-shadow: 0 0 0 4px rgba(122, 73, 136, 0.15);
+  background-color: #ffffff;
+}
+
+/* Dropdown option colors */
+select option,
+.select-field option,
+.createjob-group select option,
+.detailjob-form-group select option {
+  background-color: #ffffff;
+  color: #101936;
+  font-weight: 600;
+}
+
+/* Selected option color */
+select option:checked,
+.select-field option:checked,
+.createjob-group select option:checked,
+.detailjob-form-group select option:checked {
+  background-color: #7a4988;
+  color: #ffffff;
+}
+
+/* Disabled dropdowns */
+select:disabled,
+.select-field:disabled,
+.createjob-group select:disabled,
+.detailjob-form-group select:disabled {
+  background-color: #f3f4f6;
+  color: #9ca3af;
+  cursor: not-allowed;
+  opacity: 0.7;
+}

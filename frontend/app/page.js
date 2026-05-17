@@ -247,7 +247,7 @@ export default function HomePage() {
         <input
           className="input-field"
           type="text"
-          placeholder="Enter city, neighborhood, or ZIP"
+          placeholder="Enter city"
           value={location}
           onChange={(e) => setLocation(e.target.value)}
         />
