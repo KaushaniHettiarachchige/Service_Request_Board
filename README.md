@@ -211,4 +211,10 @@ Run tests:
 https://github.com/KaushaniHettiarachchige/Service_Request_Board
 
 # Deployment
-Use Vercel
+- backend
+  - Use Railway
+  - live url : https://servicerequestboard-production.up.railway.app/
+    
+- frontend
+  - Use Vercel
+  - live url : https://service-request-board-two.vercel.app/Use Vercel
