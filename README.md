@@ -217,4 +217,4 @@ https://github.com/KaushaniHettiarachchige/Service_Request_Board
     
 - frontend
   - Use Vercel
-  - live url : https://service-request-board-two.vercel.app/Use Vercel
+  - live url : https://service-request-board-two.vercel.app/
